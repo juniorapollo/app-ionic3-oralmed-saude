@@ -1,0 +1,33 @@
+
+  <ion-content padding class="tutorial-page">
+  
+    <ion-slides #slider #innerSlider pager>
+      <ion-slide *ngFor="let slide of slides">
+        <ion-toolbar>
+            <ion-buttons no-lines end>
+                <button ion-button color="primary" (click)="cancelIntro()">Cancelar</button>
+              </ion-buttons>
+          <!-- <ion-buttons no-lines end>
+            <button ion-button color="primary" (click)="slideNext()">Pular</button>
+          </ion-buttons> -->
+
+        </ion-toolbar>
+        <img class="slide-image" [src]="slide.image" />
+        
+        <h1 class="slide-title" [innerHTML]="slide.title"></h1>
+        <p class="descricao" [innerHTML]="slide.description"></p>
+      </ion-slide>
+
+ 
+      <ion-slide>
+        <ion-toolbar>
+        </ion-toolbar>
+        <img src="assets/img/logo/logo_oralmed.png" class="slide-image"/>
+        <h2 class="slide-title">Vamos Começar?</h2>
+        <button ion-button round (click)="gotoIniciar()"  large  icon-end color="primary">
+          Continue
+          <ion-icon name="arrow-forward"></ion-icon>
+        </button>
+      </ion-slide>
+    </ion-slides>
+  </ion-content> 

@@ -1,0 +1,24 @@
+<!--material-design-background-->
+<ion-menu [content]="content" id="menu-material">
+  <ion-content class="menu">
+    <div class="menu-header" center>
+      <img class="image-logo" src="assets/img/logo/logo_oralmed.png" />
+    </div>
+    <!-- <div class="menu-header" center *ngIf="user.getUser()"> -->
+    <!-- <img class="user-avatar round" [src]="chosenPicture || placeholder" onerror="this.src='assets/img/avatar/cosima-avatar.jpg'"/>   -->
+    <!-- <span> <ion-icon class="icon" name="person"></ion-icon><span class="name">{{user.getUser().nome}}</span><br></span>
+           <span> <ion-icon class="icon" name="mail"></ion-icon><span class="e-mail">{{user.getUser().email}}</span><br></span>
+           <span><ion-icon  class="icon" name="call"></ion-icon><span class="telefone">{{user.getUser().telefone}}</span><br></span>
+      </div> -->
+    <ion-list no-lines >
+      <button ion-item detail-none  class='btn-menu' menuClose="left" *ngFor="let p of pages" (click)="openPage(p)">
+        <ion-icon [name]="p.icon" item-left></ion-icon>
+        {{p.title}}
+      </button>
+    </ion-list>
+  </ion-content>
+
+</ion-menu>
+
+<!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

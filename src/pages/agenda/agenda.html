@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Agendamento</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row style="color:red">
+      <ion-col text-center>
+        Horário
+      </ion-col>
+      <ion-col text-center>
+        Nome
+      </ion-col>
+      <ion-col text-center >
+        Especialidade
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-list>
+
+    <button ion-item *ngFor="let item of items" (click)="itemTapped($event, item)">
+      <ion-grid>
+        <ion-row>
+          <ion-col text-center>
+            <!-- <ion-icon [name]="item.icon" item-start></ion-icon> -->
+            <span item-end>{{item.horario}}</span>
+            </ion-col>
+            <ion-col text-center>
+            {{item.title}}
+          </ion-col>
+          <ion-col text-center>
+            <div class="item" item-end>
+              {{item.profissional}}
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </button>
+
+  </ion-list>
+  <div *ngIf="selectedItem" padding>
+    You navigated here from
+    <b>{{selectedItem.title}}</b>
+  </div>
+</ion-content>

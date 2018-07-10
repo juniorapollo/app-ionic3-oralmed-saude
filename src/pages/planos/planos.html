@@ -1,0 +1,75 @@
+<ion-header>
+  
+
+    <ion-navbar no-border-bottom>
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+          </button>
+      <ion-title>
+        Planos
+      </ion-title>
+    </ion-navbar>
+  
+    <ion-toolbar no-border-top>
+      <ion-segment [(ngModel)]="planos">
+        <ion-segment-button value="individuais">
+          Individuais
+        </ion-segment-button>
+        <ion-segment-button value="familiares">
+          Familiares
+        </ion-segment-button>
+        <ion-segment-button value="empresariais">
+          Empresariais
+        </ion-segment-button>
+      </ion-segment>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content>
+    <div [ngSwitch]="planos">
+      <div *ngSwitchCase="'individuais'">
+
+              <ion-card *ngFor="let card of individual">
+                <img [src]="card.imageUrl"  />
+                <ion-card-content>
+                  <h2 text-center class="card-title">
+                      {{card.title}}
+                  </h2>
+                  <p>
+                    {{card.description}}
+                  </p>
+                </ion-card-content>
+                <button ion-button full clear (click)="realizarPlanoIdividual(card)">Contratar Plano</button>
+              </ion-card>
+  </div>
+      <div *ngSwitchCase="'familiares'">
+          <ion-card *ngFor="let card of familiar">
+              <img [src]="card.imageUrl"  />
+              <ion-card-content>
+                <h2 text-center class="card-title">
+                    {{card.title}}
+                </h2>
+                <p>
+                  {{card.description}}
+                </p>
+              </ion-card-content>
+              <button ion-button full clear (click)="realizarPlanoFamiliar(card)">Contratar Plano</button>
+            </ion-card>
+      </div>
+  
+      <div *ngSwitchCase="'empresariais'">
+          <ion-card *ngFor="let card of empresarial">
+              <img [src]="card.imageUrl"  />
+              <ion-card-content>
+                <h2 text-center class="card-title">
+                    {{card.title}}
+                </h2>
+                <p>
+                  {{card.description}}
+                </p>
+              </ion-card-content>
+              <button ion-button full clear (click)="realizarPlanoEmpresarial(card)">Contratar Plano</button>
+            </ion-card>
+    </div>
+    </div>
+  </ion-content>

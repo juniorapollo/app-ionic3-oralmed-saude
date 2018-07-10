@@ -1,0 +1,8 @@
+{
+  "name": "AppClinical",
+  "app_id": "ffdf2757",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}

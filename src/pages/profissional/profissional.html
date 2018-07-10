@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Profissionais</ion-title>
+  </ion-navbar>
+
+  <ion-toolbar>
+    <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-toolbar class="nome-especialidades" text-center color="primary">
+    <ion-title>{{selectedItem}}</ion-title>
+  </ion-toolbar>
+  <ion-content>
+    <ion-toolbar no-border-top>
+
+      <ion-list>
+        <div *ngIf="selectedItem">
+          <ion-item *ngFor="let profissional of profissionais" (click)="abrirProfissional($event,profissionais)">
+            {{ profissional }}
+          </ion-item>
+        </div>
+
+      </ion-list>
+    </ion-toolbar>
+
+  </ion-content>
+
+</ion-content>

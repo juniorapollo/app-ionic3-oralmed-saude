@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<!-- saved from url=(0035)http://localhost:8888/entrar?logout -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+        <title>Pilates Bruna Andrade</title>
+        <meta name="Daniel Junior" content="Jr System"> 
+        <!--Base Css Files--> 
+        <link href="./Pilates Bruna Andrade_files/bootstrap.min.css" rel="stylesheet">
+        <link href="./Pilates Bruna Andrade_files/login.css" rel="stylesheet" type="text/css">
+        <link href="./Pilates Bruna Andrade_files/style.css" rel="stylesheet" type="text/css">
+        <link rel="icon" type="imagem/png" href="http://localhost:8888/imagem/png">
+         <link href="./Pilates Bruna Andrade_files/font-awesome.min.css" rel="stylesheet" type="text/css">
+       
+        <!-- jQuery  -->        
+        <script src="./Pilates Bruna Andrade_files/jquery.min.js"></script>
+
+
+
+
+        <style>
+            body{
+                background:  url("http://www.buildersys.com.br/img/back3.jpeg") no-repeat center fixed;
+                background-size: cover;
+                margin:0;
+                padding: 10px;
+                left:0px;
+                -webkit-background-size: cover; /* SAFARI / CHROME */
+            }
+            .fluid{
+                position:absolute;
+                width: 100%;
+                height: 100%;
+               
+                background-color: eee;
+                display: block;
+            }
+            .loader{
+                position:absolute;
+                left: 50%;
+                top: 50%;
+                background-position: center center;
+                background-repeat: no-repeat;
+                background-color: white;
+            }
+            
+            .fa{
+                display:inline-block;
+                font:normal normal normal 14px/1 FontAwesome;
+                font-size:inherit;
+                text-rendering:auto;
+                -webkit-font-smoothing:antialiased;
+                -moz-osx-font-smoothing:grayscale;
+                transform:translate(0, 0)
+            }
+        </style>
+        <script>
+            $(window).ready(function () {
+                console.log("TESTE");
+                 $(".fluid").show();
+                
+            });
+
+
+
+        </script>
+    </head>
+
+    <body>
+        
+
+        <div class="wrapper-page">
+
+            
+
+            <div>
+                <div class="alert alert-info">Até logo!</div>
+            </div>
+
+
+            <form class="login-senha form" method="post" action="http://localhost:8888/entrar">
+                <div class="form-group form-login">
+                    <input name="username" type="text" class="form-control " placeholder="Login">
+                </div>
+                <div class="form-group form-senha">
+                    <input name="password" type="password" class="form-control" placeholder="Senha">
+                </div>
+
+                <button type="submit" class="btn  btn-black"> ENTRAR</button>
+            </form>
+        </div>
+
+        <script>
+            $(window).load(function () {
+                console.log("TESTE2");
+                
+                $(".fluid").remove();
+
+            });
+        </script>
+    
+
+</body></html>

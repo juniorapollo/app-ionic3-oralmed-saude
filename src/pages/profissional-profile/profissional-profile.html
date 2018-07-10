@@ -1,0 +1,69 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>Perfil Profissional</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content parallax-header no-bounce class="bg-modal">
+    <div class="header-image"></div>
+    <div class="main-content" text-wrap text-center>
+        <div class="circular"></div>
+        <h2>{{user.name}}</h2>
+        <p>{{user.occupation}} &bull; {{user.location}}</p>
+        <p class="profile-description">{{user.description}}</p>
+        <hr>
+        <ion-list no-lines>
+            <ion-item>
+                <ion-icon name="mail" color="primary" item-start></ion-icon>
+                <p>Email</p>
+                {{user.email}}
+                <a button ion-button href="mailto:{{user.email}}" color="primary" item-end medium>Enviar</a>
+            </ion-item>
+            <ion-item>
+                <ion-icon item-start name="call" color="danger"></ion-icon>
+                <p>Telefone</p> 
+                {{user.phone}}
+                <a button ion-button href="tel:{{user.phone}}" color="danger" item-end medium>Ligar</a>
+            </ion-item>
+            <ion-item>
+                <ion-icon item-start name="logo-whatsapp" color="secondary"></ion-icon>
+                <p>Celular</p>
+                {{user.whatsapp}}
+                <a button ion-button color="secondary" item-end medium href="whatsapp://send?text=Hi from ionic&phone=+{{user.phone}}&abid=+{{user.phone}}">Abrir</a>
+            </ion-item>
+            <ion-item>
+                <ion-icon item-start name="pin" color="twitter"></ion-icon>
+                <p>{{user.address}}</p>
+            </ion-item>
+        </ion-list>
+        
+        
+        <!-- <h2>Entrar em Contato</h2>
+        <hr>
+        <a href="https://www.linkedin.com/in/daniel-de-araujo-junior-b3735445/" button ion-button block color="linkedin" icon-start>
+            <ion-icon name='logo-linkedin'></ion-icon>
+            LinkedIn
+        </a>
+        <a href="https://www.facebook.com/junior.apollo" button ion-button block color="fb" icon-start>
+            <ion-icon name='logo-facebook'></ion-icon>
+            Facebook
+        </a>
+        <a href="#" button ion-button block color="danger" icon-start>
+            <ion-icon name='logo-youtube'></ion-icon>
+            Youtube
+        </a> -->
+    </div>
+    <ion-row no-padding>
+        <ion-col text-center>
+          <button ion-button  full   icon-left color="primary" (click)="abrirAgenda('Daniel Araujo Junior')" >
+            <ion-icon name='calendar'></ion-icon>
+            Agendar
+          </button>
+        </ion-col>
+      </ion-row>
+</ion-content>
+<!-- <ion-content>
+    <ion-toolbar class="nome-especialidades" text-center color="primary">
+        <ion-title>{{selectedItem}}</ion-title>
+      </ion-toolbar>
+</ion-content> -->
